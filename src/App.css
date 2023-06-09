@@ -1,0 +1,267 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
+.App {
+  text-align: center;
+  background-color: rgb(22, 22, 22);
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.container {
+  background-color: rgb(22, 22, 22);
+  width: 600px;
+  height: 100vh;
+  padding: 20px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.credit {
+  color: #fff;
+}
+
+.credit > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.grid {
+  width: 280px;
+  height: 336px;
+  display: grid;
+  grid-template-columns: repeat(5, calc((100% - 20px) / 5));
+  grid-template-rows: repeat(6, calc((100% - 25px) / 6));
+  row-gap: 5px;
+  column-gap: 5px;
+  padding: 5px;
+}
+
+.title {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 32px;
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+
+.tile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  border: 2px solid rgb(65, 65, 65);
+  color: #ffffff;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.keyboard {
+  margin-top: 100px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top {
+  display: flex;
+  width: 100%;
+}
+
+.middle {
+  display: flex;
+  width: 100%;
+}
+
+.bottom {
+  display: flex;
+  width: 100%;
+}
+
+.btn-keyboard {
+  background-color: grey;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+  height: 60px;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 10%;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.btn-enter {
+  background-color: grey;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  width: 100%;
+  height: 60px;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 10%;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.btn-backspace {
+  background-color: grey;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  width: 100%;
+  height: 60px;
+  color: #ffffff;
+  cursor: pointer;
+  border-radius: 10%;
+  margin-left: 2.5px;
+  margin-right: 2.5px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.btn-keyboard:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-enter:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-backspace:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.green {
+  background-color: rgb(20, 126, 43);
+  border: 2px solid rgb(20, 126, 43);
+}
+
+.yellow {
+  background-color: rgb(173, 184, 21);
+  border: 2px solid rgb(173, 184, 21);
+}
+
+.dark {
+  background-color: rgb(65, 65, 65);
+}
+
+.notification-container {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 90px;
+}
+
+.notification {
+  background-color: rgb(240, 240, 240);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.btn-reload {
+  margin-left: 15px;
+  background-color: rgb(20, 126, 43);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+  color: #fff;
+}
+
+.btn-reload:hover {
+  background-color: rgb(37, 168, 65);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 100vw;
+    padding: 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .keyboard {
+    width: 100vw;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+  .keyboard {
+    margin-top: 20px;
+  }
+  .grid {
+    width: calc(80vw - 30px);
+    height: calc((80vw - 30px) * 6 / 5);
+  }
+
+  .btn-keyboard {
+    font-size: 12px;
+    height: 50px;
+  }
+
+  .btn-enter {
+    font-size: 10px;
+    height: 50px;
+  }
+
+  .tile {
+    font-size: 20px;
+  }
+
+  .btn-backspace {
+    font-size: 10px;
+    height: 50px;
+  }
+}
